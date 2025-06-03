@@ -17,3 +17,18 @@ console.log(undefined>0)
 console.log(undefined==0)
 console.log(undefined>=0)
 console.log(undefined===0)
+
+
+const heroes = ["ShaktiMan","Nagraj","Doga"]    //typeof is object 
+let myobject = {    //typeof is object 
+    name : "Raghav",
+    RollNo : 43
+}
+
+const myFunc = function(){    //typeof is function but it is known as 'function object'
+    console.log("Hello! I am func.")
+}
+myFunc();
+
+console.table([typeof(heroes),typeof(myobject),typeof(myFunc)])
+
