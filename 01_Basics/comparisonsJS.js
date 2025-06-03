@@ -18,6 +18,7 @@ console.log(undefined==0)
 console.log(undefined>=0)
 console.log(undefined===0)
 
+//Somemore about arrays, objects and funtions
 
 const heroes = ["ShaktiMan","Nagraj","Doga"]    //typeof is object 
 let myobject = {    //typeof is object 
