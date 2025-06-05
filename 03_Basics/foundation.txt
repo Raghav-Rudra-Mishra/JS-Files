@@ -1,0 +1,29 @@
+Javascript (a single threaded language) execution context means how JS works file and code. Whenever any code is given to Js and it executes it, first GLOBAL EXECUTION CONTEXT is made. In browsers, window acts as global execution context.
+Another execution context is FUNCTIONAL EXECUTION CONTEXT.
+
+A JS code works in two phases:
+1) Memory creation phase (or Creation Phase) : Only memory allocation takes place to variables in this phase
+2) Execution Phase
+
+How code executes in JS? How calls work with call stacks?
+
+let us take an example of following code:
+
+/*
+let val1 = 10
+let val2 = 5
+function addNum(num1,num2){
+    let total = num1+num2
+    return total
+}
+let result1 = addNum(val1,val2)
+let result2 = addNum(10,2)
+*/
+
+1) Global Execution Phase : first every code is allocated to this keyword
+2) Creation Phase : All variables are allocated memory and undefined is stored in them instead of actual value. For a function, it takes definition of function instead of undefined.
+3) Execution Phase : first val1 is assigned 10 -> val2 is assigned 5. Now function definition is already stored. Now, result1 makes its another execution context. In which, a new variable environment + execution thread where again a memory creation phase and execution phase is done for a function with given parameters and other variables of function. Then in execution phase it allocates these paramters a value 10 and 5 and then computation is done. This computation is returned to global execution context/ parent execution context. After returning, this execution context gets deleted.
+    Again same thing happens with result 2 and it is also returned to global execution context
+
+In this way, the callstack is made using function's execution context using stack in LIFO structure. The execution context made at last gets executed first.
+
